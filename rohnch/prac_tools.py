@@ -33,7 +33,7 @@ def PLOT(file, **kwargs):
     if 'xlabel' in kwargs.keys():
         plt.xlabel(kwargs.pop('xlabel'))
     if 'ylabel' in kwargs.keys():
-        plt.xlabel(kwargs.pop('ylabel'))
+        plt.ylabel(kwargs.pop('ylabel'))
     if 'title' in kwargs.keys():
         plt.title(kwargs.pop('title'))
     for k, v in kwargs.items():
@@ -51,7 +51,7 @@ def PLOT(file, **kwargs):
     ax.grid(which='major', color='#BBBBBB', linestyle='-')
     ax.grid(which='minor', color='#CCCCCC', linestyle=':')
     if file == 'show':
-        plt.show()
+        plt.show(fig)
     else:
         fig.savefig(file)
 
