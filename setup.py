@@ -1,12 +1,14 @@
 import setuptools
+from datetime import datetime
 
+now = datetime.now() # current date and time
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
     name="rohnch-py",
-    version="git",
+    version=f"git-{now.strftime('%m-%d-%Y-%H-%M-%S')}",
     author="Rohn Chatterjee",
     author_email="rohn.ch@gmail.com",
     description="Useful alias / scripts",
